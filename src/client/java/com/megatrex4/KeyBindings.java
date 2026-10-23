@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.resources.Identifier;
-import org.lwjgl.glfw.GLFW;
 
 import static com.megatrex4.RandomBlockPlacement.MOD_ID;
 
@@ -22,8 +21,8 @@ public class KeyBindings {
         randomPlaceKey = net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper.registerKeyMapping(
                 new KeyMapping(
                         "key.randomblockplacement.toggle",
-                        InputConstants.Type.KEYSYM,
-                        GLFW.GLFW_KEY_R,
+                        InputConstants.Type.KEYBOARD,
+                        InputConstants.KEY_R,
                         CATEGORY
                 )
         );
